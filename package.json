@@ -17,7 +17,7 @@
   "scripts": {
     "start-dev": "NODE_ENV=development PORT=4000 react-scripts start",
     "start": "PORT=4000 NODE_ENV=production  react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm i && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
