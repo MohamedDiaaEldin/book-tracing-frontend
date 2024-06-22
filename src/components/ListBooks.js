@@ -23,6 +23,7 @@ const ListBooks = ()=>{
     const allBooks = await getAll();
     console.log(allBooks)
     
+    
     for (const book of allBooks) {
       if (book.shelf === "currentlyReading") {
         eCurReading.push(book);

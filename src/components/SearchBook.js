@@ -17,6 +17,7 @@ const SearchBook = ()=>{
     getMyBooks()
   }, [])
 
+  
   const searchHandler = (e)=>{      
     getBooks(e.target.value)    
   }
@@ -78,9 +79,8 @@ const SearchBook = ()=>{
     }
     else if (word.length >= 1){
       const res = await search(word, 10)
-      console.log('res', res)
-      if (res.length > 0 ){
-        setBooks(res);
+      if (res.books.length > 0 ){
+        setBooks(res.books);
       }
       
     }
@@ -88,7 +88,7 @@ const SearchBook = ()=>{
   }
 
   const updateShelf = async ( bookId ,fromShelf,  toShelf)=>{
-    // updata in the database 
+    // update in the database 
     update(bookId, toShelf)    
   } 
   
